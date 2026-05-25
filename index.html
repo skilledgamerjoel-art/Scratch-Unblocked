@@ -30,7 +30,7 @@
 
     /* Left menu */
     .sidebar {
-      width: 300px;
+      width: 320px;
       background: #ffffff;
       padding: 20px;
       border-right: 2px solid #e5e5e5;
@@ -45,12 +45,13 @@
       font-size: 20px;
     }
 
+    /* Game cards */
     .game-card {
       background: #fafafa;
       border: 1px solid #ddd;
       border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 20px;
+      padding: 12px;
+      margin-bottom: 25px;
       text-align: center;
       box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
@@ -115,11 +116,41 @@
     <div class="sidebar">
       <h2>Your Games</h2>
 
-      <!-- GAME CARD -->
+      <!-- Profile section -->
+      <div style="margin-bottom: 25px; text-align:center;">
+        <img src="YOUR_THUMBNAIL.png" style="width:140px; border-radius:10px;">
+        <div style="font-weight:bold; margin-top:8px; color:#0d99ff;">Levi's Game Hub</div>
+        <div style="font-size:14px; color:#777;">Creator: Joey</div>
+      </div>
+
+      <!-- Featured Game -->
       <div class="game-card">
         <img src="YOUR_THUMBNAIL.png">
         <div class="game-title">Garden Pet Clicker</div>
+        <div style="font-size:13px; color:#777; margin-bottom:8px;">Updated recently</div>
+
         <a class="play-btn" href="mygame.html">Play</a>
+
+        <div style="margin-top:8px;">
+          <a style="
+            display:inline-block;
+            background:#ddd;
+            color:#555;
+            padding:6px 12px;
+            border-radius:6px;
+            text-decoration:none;
+            font-size:14px;
+          ">See inside</a>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr style="margin:25px 0; border:0; border-top:1px solid #e5e5e5;">
+
+      <!-- Coming soon -->
+      <div class="game-card">
+        <div class="game-title" style="color:#aaa;">More games coming soon…</div>
+        <div style="font-size:13px; color:#777;">Add your next game here!</div>
       </div>
 
     </div>
@@ -131,7 +162,7 @@
       <div class="welcome-box">
         This is your custom Scratch‑style game hub.  
         <br><br>
-        Your games will appear on the left menu.  
+        Your games appear on the left menu.  
         <br><br>
         Right now you have:
         <br>
@@ -141,6 +172,10 @@
       </div>
     </div>
 
+  </div>
+
+</body>
+</html>
   </div>
 
 </body>
