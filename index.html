@@ -57,7 +57,7 @@
     }
 
     .game-card img {
-      width: 70%; /* smaller thumbnail */
+      width: 70%;
       border-radius: 8px;
       margin: auto;
     }
@@ -106,13 +106,28 @@
       margin-bottom: 30px;
     }
 
+    /* UPDATE BOX — BLUE VERSION */
     .update-box {
       background: #fff7d6;
       padding: 20px;
       border-radius: 10px;
-      border-left: 5px solid #ffb300;
+      border-left: 5px solid #0d99ff; /* changed from orange to blue */
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       font-size: 17px;
+      position: relative;
+    }
+
+    /* NEWS LABEL */
+    .news-label {
+      position: absolute;
+      top: -12px;
+      left: -5px;
+      background: #0d99ff;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
   </style>
@@ -130,14 +145,14 @@
       <!-- Profile section -->
       <div style="margin-bottom: 25px; text-align:center;">
         <img src="https://github.com/skilledgamerjoel-art/Scratch-Unblocked/blob/main/Screenshot%202026-05-23%20162357.png?raw=true" 
-             style="width:90px; border-radius:10px;"> <!-- smaller profile -->
-        <div style="font-weight:bold; margin-top:8px; color:#0d99ff;">Scratch Game Hub</div>
+             style="width:90px; border-radius:10px;">
+        <div style="font-weight:bold; margin-top:8px; color:#0d99ff;">DeadlyDevelopment</div>
         <div style="font-size:14px; color:#777;">Creator: Joel</div>
       </div>
 
       <!-- Featured Game -->
       <div class="game-card">
-        <img src="https://github.com/skilledgamerjoel-art/Scratch-Unblocked/blob/main/Screenshot%202026-05-25%20190727.png?raw=true"> <!-- NEW thumbnail -->
+        <img src="https://github.com/skilledgamerjoel-art/Scratch-Unblocked/blob/main/Screenshot%202026-05-25%20190727.png?raw=true">
         <div class="game-title">Garden Pet Clicker</div>
         <div style="font-size:13px; color:#777; margin-bottom:8px;">Updated recently</div>
 
@@ -172,9 +187,11 @@
       </div>
 
       <div class="update-box">
+        <div class="news-label">News</div>
+
         <strong>Next Update:</strong>  
         <br>
-        <span style="color:#ff8c00;">Animals And All:</span> Garden Pet Clicker v1.6
+        <span style="color:#0d99ff;">Animals And All:</span> Garden Pet Clicker v1.6
         <br><br>
         <strong>Planned Features:</strong>
         <ul>
