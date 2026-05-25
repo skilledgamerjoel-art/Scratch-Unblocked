@@ -25,7 +25,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      margin-top: 30px;
+      margin-top: 15px; /* moved up */
       padding: 0 20px;
     }
 
@@ -36,9 +36,9 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
+      margin-top: -10px; /* moved up */
     }
 
-    /* Smaller game */
     iframe {
       width: 650px;
       height: 480px;
@@ -46,9 +46,8 @@
       background: #000;
     }
 
-    /* Buttons row */
     .button-row {
-      margin-bottom: 15px;
+      margin-bottom: 10px; /* moved up */
       display: flex;
       justify-content: center;
       gap: 15px;
@@ -123,13 +122,8 @@
 
       <!-- Buttons -->
       <div class="button-row">
-        <a class="fullscreen-btn" href="mygame-fullscreen.html">
-  Fullscreen
-</a>
-
-        <a class="exit-btn" href="index.html">
-          Exit Game
-        </a>
+        <a class="fullscreen-btn" href="mygame-fullscreen.html">Fullscreen</a>
+        <a class="exit-btn" href="index.html">Exit Game</a>
       </div>
 
       <iframe
@@ -138,17 +132,78 @@
         scrolling="no">
       </iframe>
 
+      <!-- COMMENT SECTION -->
+      <div style="
+        margin-top: 20px;
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: left;
+      ">
+        <h3 style="color:#0d99ff; margin-top:0;">Comments</h3>
+
+        <!-- Comment input -->
+        <textarea id="commentInput" placeholder="Add a comment..." 
+          style="
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 14px;
+          ">
+        </textarea>
+
+        <button onclick="addComment()" style="
+          margin-top: 10px;
+          background: #0d99ff;
+          color: white;
+          padding: 8px 14px;
+          border: none;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+        ">Post</button>
+
+        <!-- Comment list -->
+        <div id="commentList" style="margin-top: 15px;"></div>
+      </div>
+
     </div>
 
     <!-- SIDEBAR -->
     <div class="sidebar">
       <h2>About the Game</h2>
       <p><strong>Garden Pet Clicker</strong> is a fun pet‑raising clicker game where you grow, feed, and evolve your pixel pets.</p>
-      <p>Created by Joey, hosted by Joel.</p>
+      <p>Created by Joey, hosted by Levi.</p>
       <p>Play in fullscreen for the best experience!</p>
     </div>
 
   </div>
+
+  <!-- Comment script -->
+  <script>
+    function addComment() {
+      const input = document.getElementById("commentInput");
+      const list = document.getElementById("commentList");
+
+      if (input.value.trim() === "") return;
+
+      const comment = document.createElement("div");
+      comment.style.padding = "10px";
+      comment.style.marginBottom = "10px";
+      comment.style.background = "#f7f7f7";
+      comment.style.borderRadius = "6px";
+      comment.style.border = "1px solid #ddd";
+      comment.innerText = input.value;
+
+      list.prepend(comment);
+      input.value = "";
+    }
+  </script>
 
 </body>
 </html>
