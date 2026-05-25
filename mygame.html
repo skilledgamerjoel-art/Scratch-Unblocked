@@ -6,130 +6,83 @@
   <style>
     body {
       margin: 0;
-      background: #050505;
-      color: #f5f5f5;
+      background: #f2f2f2; /* Scratch-style light grey */
       font-family: Arial, sans-serif;
       text-align: center;
+      color: #333;
     }
 
-    .top-bar {
-      background: #111;
-      padding: 15px 20px;
-      box-shadow: 0 0 15px #000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .top-bar .logo {
+    .header {
+      background: #ffffff;
+      border-bottom: 2px solid #e5e5e5;
+      padding: 15px;
+      font-size: 22px;
       font-weight: bold;
-      font-size: 20px;
-      color: #ffb347;
-      text-shadow: 0 0 10px #ff8c00;
-    }
-
-    .top-bar .right-links {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .top-bar a {
-      color: #ffb347;
-      text-decoration: none;
-      margin-left: 10px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 30px auto 40px auto;
-      padding: 0 15px;
+      color: #0d99ff; /* Scratch blue */
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
-      text-shadow: 0 0 15px #ff8c00;
+      margin-top: 25px;
+      font-size: 28px;
+      color: #333;
     }
 
-    .subtitle {
-      font-size: 14px;
-      color: #bbb;
-      margin-bottom: 25px;
-    }
-
-    .game-wrapper {
-      background: #111;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 0 20px #000;
+    .game-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       display: inline-block;
+      margin-top: 20px;
     }
 
     iframe {
-      width: 1000px;
-      height: 750px;
+      width: 960px;
+      height: 720px;
       border: none;
       background: #000;
     }
 
-    .hint {
-      margin-top: 12px;
-      font-size: 13px;
-      color: #aaa;
+    .back {
+      margin-top: 20px;
+      font-size: 16px;
     }
 
-    .back-link {
-      margin-top: 25px;
-      font-size: 14px;
-    }
-
-    .back-link a {
-      color: #ffb347;
+    .back a {
+      color: #0d99ff;
       text-decoration: none;
     }
 
-    .back-link a:hover {
+    .back a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1000px) {
       iframe {
         width: 95vw;
-        height: 71vw; /* keeps similar aspect ratio */
+        height: 70vw;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <div class="logo">Scratch Unblocked</div>
-    <div class="right-links">
-      <span>Garden Pet Clicker</span>
-      <a href="index.html">Home</a>
-    </div>
+  <div class="header">Scratch Unblocked</div>
+
+  <h1>Garden Pet Clicker</h1>
+
+  <div class="game-box">
+    <iframe
+      src="https://scratch.mit.edu/projects/1240362921/embed"
+      allowtransparency="true"
+      allowfullscreen
+      scrolling="no">
+    </iframe>
   </div>
 
-  <div class="container">
-    <h1>Garden Pet Clicker</h1>
-    <div class="subtitle">By Joey — hosted by Joel</div>
-
-    <div class="game-wrapper">
-      <iframe
-        src="https://scratch.mit.edu/projects/1240362921/embed"
-        allowtransparency="true"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen>
-      </iframe>
-      <div class="hint">
-        Tip: Use the square icon in the bottom-right of the game to go fullscreen.
-      </div>
-    </div>
-
-    <div class="back-link">
-      <a href="index.html">← Back to all games</a>
-    </div>
+  <div class="back">
+    <a href="index.html">← Back to all games</a>
   </div>
 
 </body>
+</html>
