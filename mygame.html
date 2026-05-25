@@ -6,64 +6,102 @@
   <style>
     body {
       margin: 0;
-      background: #f2f2f2; /* Scratch light grey */
+      background: #f2f2f2;
       font-family: Arial, sans-serif;
-      text-align: center;
       color: #333;
     }
 
-    /* Scratch-style top bar */
+    /* Top bar */
     .header {
       background: #ffffff;
       border-bottom: 2px solid #e5e5e5;
       padding: 15px;
       font-size: 22px;
       font-weight: bold;
-      color: #0d99ff; /* Scratch blue */
+      color: #0d99ff;
+      text-align: center;
     }
 
-    h1 {
-      margin-top: 25px;
-      font-size: 28px;
-      color: #333;
+    /* Layout container */
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+      padding: 0 20px;
     }
 
-    /* White box around the game like Scratch */
+    /* Game box */
     .game-box {
       background: #ffffff;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: inline-block;
-      margin-top: 20px;
+      text-align: center;
     }
 
+    /* Smaller game */
     iframe {
-      width: 960px;
-      height: 720px;
+      width: 720px;
+      height: 540px;
       border: none;
       background: #000;
     }
 
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      color: #0d99ff;
+    }
+
+    .fullscreen-tip {
+      margin-top: 10px;
+      padding: 10px;
+      background: #e8f3ff;
+      border-left: 4px solid #0d99ff;
+      font-size: 14px;
+    }
+
+    /* Back button */
     .back {
-      margin-top: 20px;
-      font-size: 16px;
+      margin: 25px;
+      text-align: center;
     }
 
     .back a {
-      color: #0d99ff;
+      background: #0d99ff;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
       text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     .back a:hover {
-      text-decoration: underline;
+      background: #0b7ed6;
     }
 
-    /* Mobile scaling */
+    /* Mobile */
     @media (max-width: 1000px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
       iframe {
         width: 95vw;
         height: 70vw;
+      }
+      .sidebar {
+        width: 90%;
       }
     }
   </style>
@@ -72,17 +110,33 @@
 
   <div class="header">Scratch Unblocked</div>
 
-  <h1>Garden Pet Clicker</h1>
+  <div class="content">
 
-  <div class="game-box">
-    <iframe
-      src="https://scratch.mit.edu/projects/1240362921/embed"
-      allowtransparency="true"
-      allowfullscreen
-      scrolling="no">
-    </iframe>
+    <!-- GAME -->
+    <div class="game-box">
+      <iframe
+        src="https://scratch.mit.edu/projects/1240362921/embed"
+        allowtransparency="true"
+        allowfullscreen
+        scrolling="no">
+      </iframe>
+
+      <div class="fullscreen-tip">
+        ⭐ Fullscreen button is inside the game — bottom‑right corner (the square icon).
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>About the Game</h2>
+      <p><strong>Garden Pet Clicker</strong> is a fun pet‑raising clicker game where you grow, feed, and evolve your pixel pets.</p>
+      <p>Created by Joey, hosted by Joel.</p>
+      <p>Play in fullscreen for the best experience!</p>
+    </div>
+
   </div>
 
+  <!-- Back button -->
   <div class="back">
     <a href="index.html">← Back to all games</a>
   </div>
